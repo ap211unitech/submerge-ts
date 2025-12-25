@@ -4,7 +4,7 @@ import type { Client, Options as Options2, TDataShape } from './client';
 import { client } from './client.gen';
 import { getBlocksByReferenceResponseTransformer, getBlocksResponseTransformer, getCallByHashResponseTransformer, getCallExtrinsicByHashResponseTransformer, getCallsByBlockReferenceAndExtrinsicIndexResponseTransformer, getCallsByBlockReferenceResponseTransformer, getCallsByExtrinsicHashResponseTransformer, getCallsResponseTransformer, getEventByHashResponseTransformer, getEventsByBlockReferenceAndExtrinsicIndexResponseTransformer, getEventsByBlockReferenceAndIndexResponseTransformer, getEventsByBlockReferenceResponseTransformer, getEventsByExtrinsicHashResponseTransformer, getEventsResponseTransformer, getExtrinsicByHashResponseTransformer, getExtrinsicRootCallByHashResponseTransformer, getExtrinsicsByBlockReferenceAndIndexResponseTransformer, getExtrinsicsByBlockReferenceResponseTransformer, getExtrinsicsResponseTransformer, getGenesisRecordsResponseTransformer, getMetadataListResponseTransformer, getParentCallByHashResponseTransformer, getSubCallsByHashResponseTransformer, getTraceByHashResponseTransformer, getTracesByBlockReferenceResponseTransformer, getTracesResponseTransformer } from './transformers.gen';
 import type { GetBlocksByReferenceData, GetBlocksByReferenceErrors, GetBlocksByReferenceResponses, GetBlocksData, GetBlocksErrors, GetBlocksResponses, GetCallArgsByHashData, GetCallArgsByHashErrors, GetCallArgsByHashResponses, GetCallByHashData, GetCallByHashErrors, GetCallByHashResponses, GetCallExtrinsicByHashData, GetCallExtrinsicByHashErrors, GetCallExtrinsicByHashResponses, GetCallsByBlockReferenceAndExtrinsicIndexData, GetCallsByBlockReferenceAndExtrinsicIndexErrors, GetCallsByBlockReferenceAndExtrinsicIndexResponses, GetCallsByBlockReferenceData, GetCallsByBlockReferenceErrors, GetCallsByBlockReferenceResponses, GetCallsByExtrinsicHashData, GetCallsByExtrinsicHashErrors, GetCallsByExtrinsicHashResponses, GetCallsData, GetCallsErrors, GetCallsResponses, GetEventArgsByHashData, GetEventArgsByHashErrors, GetEventArgsByHashResponses, GetEventByHashData, GetEventByHashErrors, GetEventByHashResponses, GetEventsByBlockReferenceAndExtrinsicIndexData, GetEventsByBlockReferenceAndExtrinsicIndexErrors, GetEventsByBlockReferenceAndExtrinsicIndexResponses, GetEventsByBlockReferenceAndIndexData, GetEventsByBlockReferenceAndIndexErrors, GetEventsByBlockReferenceAndIndexResponses, GetEventsByBlockReferenceData, GetEventsByBlockReferenceErrors, GetEventsByBlockReferenceResponses, GetEventsByExtrinsicHashData, GetEventsByExtrinsicHashErrors, GetEventsByExtrinsicHashResponses, GetEventsData, GetEventsErrors, GetEventsResponses, GetExtrinsicByHashData, GetExtrinsicByHashErrors, GetExtrinsicByHashResponses, GetExtrinsicRootCallByHashData, GetExtrinsicRootCallByHashErrors, GetExtrinsicRootCallByHashResponses, GetExtrinsicsByBlockReferenceAndIndexData, GetExtrinsicsByBlockReferenceAndIndexErrors, GetExtrinsicsByBlockReferenceAndIndexResponses, GetExtrinsicsByBlockReferenceData, GetExtrinsicsByBlockReferenceErrors, GetExtrinsicsByBlockReferenceResponses, GetExtrinsicsData, GetExtrinsicsErrors, GetExtrinsicsResponses, GetGenesisRecordsData, GetGenesisRecordsErrors, GetGenesisRecordsResponses, GetMetadataData, GetMetadataErrors, GetMetadataHexData, GetMetadataHexErrors, GetMetadataHexResponses, GetMetadataJsonData, GetMetadataJsonErrors, GetMetadataJsonResponses, GetMetadataListData, GetMetadataListErrors, GetMetadataListResponses, GetMetadataPalletCallsData, GetMetadataPalletCallsErrors, GetMetadataPalletCallsResponses, GetMetadataPalletConstantsData, GetMetadataPalletConstantsErrors, GetMetadataPalletConstantsResponses, GetMetadataPalletData, GetMetadataPalletErrors, GetMetadataPalletErrorsData, GetMetadataPalletErrorsErrors, GetMetadataPalletErrorsResponses, GetMetadataPalletEventsData, GetMetadataPalletEventsErrors, GetMetadataPalletEventsResponses, GetMetadataPalletResponses, GetMetadataPalletsData, GetMetadataPalletsErrors, GetMetadataPalletsResponses, GetMetadataPalletStorageItemsData, GetMetadataPalletStorageItemsErrors, GetMetadataPalletStorageItemsResponses, GetMetadataResponses, GetParentCallByHashData, GetParentCallByHashErrors, GetParentCallByHashResponses, GetSubCallsByHashData, GetSubCallsByHashErrors, GetSubCallsByHashResponses, GetTraceByHashData, GetTraceByHashErrors, GetTraceByHashResponses, GetTracesByBlockReferenceData, GetTracesByBlockReferenceErrors, GetTracesByBlockReferenceResponses, GetTracesData, GetTracesErrors, GetTracesResponses, GetTraceValueByHashData, GetTraceValueByHashErrors, GetTraceValueByHashResponses } from './types.gen';
-import { zGetBlocksByReferenceData, zGetBlocksByReferenceResponse, zGetBlocksData, zGetBlocksResponse, zGetCallArgsByHashData, zGetCallArgsByHashResponse, zGetCallByHashData, zGetCallByHashResponse, zGetCallExtrinsicByHashData, zGetCallExtrinsicByHashResponse, zGetCallsByBlockReferenceAndExtrinsicIndexData, zGetCallsByBlockReferenceAndExtrinsicIndexResponse, zGetCallsByBlockReferenceData, zGetCallsByBlockReferenceResponse, zGetCallsByExtrinsicHashData, zGetCallsByExtrinsicHashResponse, zGetCallsData, zGetCallsResponse, zGetEventArgsByHashData, zGetEventArgsByHashResponse, zGetEventByHashData, zGetEventByHashResponse, zGetEventsByBlockReferenceAndExtrinsicIndexData, zGetEventsByBlockReferenceAndExtrinsicIndexResponse, zGetEventsByBlockReferenceAndIndexData, zGetEventsByBlockReferenceAndIndexResponse, zGetEventsByBlockReferenceData, zGetEventsByBlockReferenceResponse, zGetEventsByExtrinsicHashData, zGetEventsByExtrinsicHashResponse, zGetEventsData, zGetEventsResponse, zGetExtrinsicByHashData, zGetExtrinsicByHashResponse, zGetExtrinsicRootCallByHashData, zGetExtrinsicRootCallByHashResponse, zGetExtrinsicsByBlockReferenceAndIndexData, zGetExtrinsicsByBlockReferenceAndIndexResponse, zGetExtrinsicsByBlockReferenceData, zGetExtrinsicsByBlockReferenceResponse, zGetExtrinsicsData, zGetExtrinsicsResponse, zGetGenesisRecordsData, zGetGenesisRecordsResponse, zGetMetadataData, zGetMetadataHexData, zGetMetadataHexResponse, zGetMetadataJsonData, zGetMetadataJsonResponse, zGetMetadataListData, zGetMetadataListResponse, zGetMetadataPalletCallsData, zGetMetadataPalletCallsResponse, zGetMetadataPalletConstantsData, zGetMetadataPalletConstantsResponse, zGetMetadataPalletData, zGetMetadataPalletErrorsData, zGetMetadataPalletErrorsResponse, zGetMetadataPalletEventsData, zGetMetadataPalletEventsResponse, zGetMetadataPalletResponse, zGetMetadataPalletsData, zGetMetadataPalletsResponse, zGetMetadataPalletStorageItemsData, zGetMetadataPalletStorageItemsResponse, zGetMetadataResponse, zGetParentCallByHashData, zGetParentCallByHashResponse, zGetSubCallsByHashData, zGetSubCallsByHashResponse, zGetTraceByHashData, zGetTraceByHashResponse, zGetTracesByBlockReferenceData, zGetTracesByBlockReferenceResponse, zGetTracesData, zGetTracesResponse, zGetTraceValueByHashData, zGetTraceValueByHashResponse } from './zod.gen';
+import { zGetBlocksByReferenceData, zGetBlocksData, zGetCallArgsByHashData, zGetCallByHashData, zGetCallExtrinsicByHashData, zGetCallsByBlockReferenceAndExtrinsicIndexData, zGetCallsByBlockReferenceData, zGetCallsByExtrinsicHashData, zGetCallsData, zGetEventArgsByHashData, zGetEventByHashData, zGetEventsByBlockReferenceAndExtrinsicIndexData, zGetEventsByBlockReferenceAndIndexData, zGetEventsByBlockReferenceData, zGetEventsByExtrinsicHashData, zGetEventsData, zGetExtrinsicByHashData, zGetExtrinsicRootCallByHashData, zGetExtrinsicsByBlockReferenceAndIndexData, zGetExtrinsicsByBlockReferenceData, zGetExtrinsicsData, zGetGenesisRecordsData, zGetMetadataData, zGetMetadataHexData, zGetMetadataJsonData, zGetMetadataListData, zGetMetadataPalletCallsData, zGetMetadataPalletConstantsData, zGetMetadataPalletData, zGetMetadataPalletErrorsData, zGetMetadataPalletEventsData, zGetMetadataPalletsData, zGetMetadataPalletStorageItemsData, zGetParentCallByHashData, zGetSubCallsByHashData, zGetTraceByHashData, zGetTracesByBlockReferenceData, zGetTracesData, zGetTraceValueByHashData } from './zod.gen';
 
 export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean> = Options2<TData, ThrowOnError> & {
     /**
@@ -30,7 +30,6 @@ export class BlockService {
         return (options?.client ?? client).get<GetBlocksResponses, GetBlocksErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetBlocksData.parseAsync(data),
             responseTransformer: getBlocksResponseTransformer,
-            responseValidator: async (data) => await zGetBlocksResponse.parseAsync(data),
             url: '/blocks',
             ...options
         });
@@ -45,7 +44,6 @@ export class BlockService {
         return (options.client ?? client).get<GetBlocksByReferenceResponses, GetBlocksByReferenceErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetBlocksByReferenceData.parseAsync(data),
             responseTransformer: getBlocksByReferenceResponseTransformer,
-            responseValidator: async (data) => await zGetBlocksByReferenceResponse.parseAsync(data),
             url: '/blocks/{block_ref}',
             ...options
         });
@@ -60,7 +58,6 @@ export class BlockService {
         return (options.client ?? client).get<GetEventsByBlockReferenceAndIndexResponses, GetEventsByBlockReferenceAndIndexErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetEventsByBlockReferenceAndIndexData.parseAsync(data),
             responseTransformer: getEventsByBlockReferenceAndIndexResponseTransformer,
-            responseValidator: async (data) => await zGetEventsByBlockReferenceAndIndexResponse.parseAsync(data),
             url: '/blocks/{block_ref}/events/{event_index}',
             ...options
         });
@@ -75,7 +72,6 @@ export class BlockService {
         return (options.client ?? client).get<GetExtrinsicsByBlockReferenceAndIndexResponses, GetExtrinsicsByBlockReferenceAndIndexErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetExtrinsicsByBlockReferenceAndIndexData.parseAsync(data),
             responseTransformer: getExtrinsicsByBlockReferenceAndIndexResponseTransformer,
-            responseValidator: async (data) => await zGetExtrinsicsByBlockReferenceAndIndexResponse.parseAsync(data),
             url: '/blocks/{block_ref}/extrinsics/{extrinsic_index}',
             ...options
         });
@@ -92,7 +88,6 @@ export class CallService {
         return (options.client ?? client).get<GetCallsByBlockReferenceResponses, GetCallsByBlockReferenceErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetCallsByBlockReferenceData.parseAsync(data),
             responseTransformer: getCallsByBlockReferenceResponseTransformer,
-            responseValidator: async (data) => await zGetCallsByBlockReferenceResponse.parseAsync(data),
             url: '/blocks/{block_ref}/calls',
             ...options
         });
@@ -107,7 +102,6 @@ export class CallService {
         return (options.client ?? client).get<GetExtrinsicsByBlockReferenceResponses, GetExtrinsicsByBlockReferenceErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetExtrinsicsByBlockReferenceData.parseAsync(data),
             responseTransformer: getExtrinsicsByBlockReferenceResponseTransformer,
-            responseValidator: async (data) => await zGetExtrinsicsByBlockReferenceResponse.parseAsync(data),
             url: '/blocks/{block_ref}/extrinsics',
             ...options
         });
@@ -122,7 +116,6 @@ export class CallService {
         return (options.client ?? client).get<GetCallsByBlockReferenceAndExtrinsicIndexResponses, GetCallsByBlockReferenceAndExtrinsicIndexErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetCallsByBlockReferenceAndExtrinsicIndexData.parseAsync(data),
             responseTransformer: getCallsByBlockReferenceAndExtrinsicIndexResponseTransformer,
-            responseValidator: async (data) => await zGetCallsByBlockReferenceAndExtrinsicIndexResponse.parseAsync(data),
             url: '/blocks/{block_ref}/extrinsics/{extrinsic_index}/calls',
             ...options
         });
@@ -137,7 +130,6 @@ export class CallService {
         return (options.client ?? client).get<GetEventsByBlockReferenceAndExtrinsicIndexResponses, GetEventsByBlockReferenceAndExtrinsicIndexErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetEventsByBlockReferenceAndExtrinsicIndexData.parseAsync(data),
             responseTransformer: getEventsByBlockReferenceAndExtrinsicIndexResponseTransformer,
-            responseValidator: async (data) => await zGetEventsByBlockReferenceAndExtrinsicIndexResponse.parseAsync(data),
             url: '/blocks/{block_ref}/extrinsics/{extrinsic_index}/events',
             ...options
         });
@@ -152,7 +144,6 @@ export class CallService {
         return (options?.client ?? client).get<GetCallsResponses, GetCallsErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetCallsData.parseAsync(data),
             responseTransformer: getCallsResponseTransformer,
-            responseValidator: async (data) => await zGetCallsResponse.parseAsync(data),
             url: '/calls',
             ...options
         });
@@ -167,7 +158,6 @@ export class CallService {
         return (options.client ?? client).get<GetCallByHashResponses, GetCallByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetCallByHashData.parseAsync(data),
             responseTransformer: getCallByHashResponseTransformer,
-            responseValidator: async (data) => await zGetCallByHashResponse.parseAsync(data),
             url: '/calls/{call_hash}',
             ...options
         });
@@ -181,7 +171,6 @@ export class CallService {
     public static getCallArgsByHash<ThrowOnError extends boolean = false>(options: Options<GetCallArgsByHashData, ThrowOnError>) {
         return (options.client ?? client).get<GetCallArgsByHashResponses, GetCallArgsByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetCallArgsByHashData.parseAsync(data),
-            responseValidator: async (data) => await zGetCallArgsByHashResponse.parseAsync(data),
             url: '/calls/{call_hash}/args',
             ...options
         });
@@ -196,7 +185,6 @@ export class CallService {
         return (options.client ?? client).get<GetCallExtrinsicByHashResponses, GetCallExtrinsicByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetCallExtrinsicByHashData.parseAsync(data),
             responseTransformer: getCallExtrinsicByHashResponseTransformer,
-            responseValidator: async (data) => await zGetCallExtrinsicByHashResponse.parseAsync(data),
             url: '/calls/{call_hash}/extrinsic',
             ...options
         });
@@ -211,7 +199,6 @@ export class CallService {
         return (options.client ?? client).get<GetParentCallByHashResponses, GetParentCallByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetParentCallByHashData.parseAsync(data),
             responseTransformer: getParentCallByHashResponseTransformer,
-            responseValidator: async (data) => await zGetParentCallByHashResponse.parseAsync(data),
             url: '/calls/{call_hash}/parent',
             ...options
         });
@@ -226,7 +213,6 @@ export class CallService {
         return (options.client ?? client).get<GetSubCallsByHashResponses, GetSubCallsByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetSubCallsByHashData.parseAsync(data),
             responseTransformer: getSubCallsByHashResponseTransformer,
-            responseValidator: async (data) => await zGetSubCallsByHashResponse.parseAsync(data),
             url: '/calls/{call_hash}/subs',
             ...options
         });
@@ -241,7 +227,6 @@ export class CallService {
         return (options.client ?? client).get<GetExtrinsicRootCallByHashResponses, GetExtrinsicRootCallByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetExtrinsicRootCallByHashData.parseAsync(data),
             responseTransformer: getExtrinsicRootCallByHashResponseTransformer,
-            responseValidator: async (data) => await zGetExtrinsicRootCallByHashResponse.parseAsync(data),
             url: '/extrinsics/{extrinsic_hash}/call',
             ...options
         });
@@ -256,7 +241,6 @@ export class CallService {
         return (options.client ?? client).get<GetCallsByExtrinsicHashResponses, GetCallsByExtrinsicHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetCallsByExtrinsicHashData.parseAsync(data),
             responseTransformer: getCallsByExtrinsicHashResponseTransformer,
-            responseValidator: async (data) => await zGetCallsByExtrinsicHashResponse.parseAsync(data),
             url: '/extrinsics/{extrinsic_hash}/calls',
             ...options
         });
@@ -273,7 +257,6 @@ export class EventService {
         return (options.client ?? client).get<GetEventsByBlockReferenceResponses, GetEventsByBlockReferenceErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetEventsByBlockReferenceData.parseAsync(data),
             responseTransformer: getEventsByBlockReferenceResponseTransformer,
-            responseValidator: async (data) => await zGetEventsByBlockReferenceResponse.parseAsync(data),
             url: '/blocks/{block_ref}/events',
             ...options
         });
@@ -288,7 +271,6 @@ export class EventService {
         return (options?.client ?? client).get<GetEventsResponses, GetEventsErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetEventsData.parseAsync(data),
             responseTransformer: getEventsResponseTransformer,
-            responseValidator: async (data) => await zGetEventsResponse.parseAsync(data),
             url: '/events',
             ...options
         });
@@ -303,7 +285,6 @@ export class EventService {
         return (options.client ?? client).get<GetEventByHashResponses, GetEventByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetEventByHashData.parseAsync(data),
             responseTransformer: getEventByHashResponseTransformer,
-            responseValidator: async (data) => await zGetEventByHashResponse.parseAsync(data),
             url: '/events/{event_hash}',
             ...options
         });
@@ -317,7 +298,6 @@ export class EventService {
     public static getEventArgsByHash<ThrowOnError extends boolean = false>(options: Options<GetEventArgsByHashData, ThrowOnError>) {
         return (options.client ?? client).get<GetEventArgsByHashResponses, GetEventArgsByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetEventArgsByHashData.parseAsync(data),
-            responseValidator: async (data) => await zGetEventArgsByHashResponse.parseAsync(data),
             url: '/events/{event_hash}/args',
             ...options
         });
@@ -332,7 +312,6 @@ export class EventService {
         return (options.client ?? client).get<GetEventsByExtrinsicHashResponses, GetEventsByExtrinsicHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetEventsByExtrinsicHashData.parseAsync(data),
             responseTransformer: getEventsByExtrinsicHashResponseTransformer,
-            responseValidator: async (data) => await zGetEventsByExtrinsicHashResponse.parseAsync(data),
             url: '/extrinsics/{extrinsic_hash}/events',
             ...options
         });
@@ -349,7 +328,6 @@ export class TraceService {
         return (options.client ?? client).get<GetTracesByBlockReferenceResponses, GetTracesByBlockReferenceErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetTracesByBlockReferenceData.parseAsync(data),
             responseTransformer: getTracesByBlockReferenceResponseTransformer,
-            responseValidator: async (data) => await zGetTracesByBlockReferenceResponse.parseAsync(data),
             url: '/blocks/{block_ref}/traces',
             ...options
         });
@@ -364,7 +342,6 @@ export class TraceService {
         return (options?.client ?? client).get<GetTracesResponses, GetTracesErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetTracesData.parseAsync(data),
             responseTransformer: getTracesResponseTransformer,
-            responseValidator: async (data) => await zGetTracesResponse.parseAsync(data),
             url: '/traces',
             ...options
         });
@@ -379,7 +356,6 @@ export class TraceService {
         return (options.client ?? client).get<GetTraceByHashResponses, GetTraceByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetTraceByHashData.parseAsync(data),
             responseTransformer: getTraceByHashResponseTransformer,
-            responseValidator: async (data) => await zGetTraceByHashResponse.parseAsync(data),
             url: '/traces/{trace_hash}',
             ...options
         });
@@ -393,7 +369,6 @@ export class TraceService {
     public static getTraceValueByHash<ThrowOnError extends boolean = false>(options: Options<GetTraceValueByHashData, ThrowOnError>) {
         return (options.client ?? client).get<GetTraceValueByHashResponses, GetTraceValueByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetTraceValueByHashData.parseAsync(data),
-            responseValidator: async (data) => await zGetTraceValueByHashResponse.parseAsync(data),
             url: '/traces/{trace_hash}/value',
             ...options
         });
@@ -410,7 +385,6 @@ export class ExtrinsicService {
         return (options?.client ?? client).get<GetExtrinsicsResponses, GetExtrinsicsErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetExtrinsicsData.parseAsync(data),
             responseTransformer: getExtrinsicsResponseTransformer,
-            responseValidator: async (data) => await zGetExtrinsicsResponse.parseAsync(data),
             url: '/extrinsics',
             ...options
         });
@@ -425,7 +399,6 @@ export class ExtrinsicService {
         return (options.client ?? client).get<GetExtrinsicByHashResponses, GetExtrinsicByHashErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetExtrinsicByHashData.parseAsync(data),
             responseTransformer: getExtrinsicByHashResponseTransformer,
-            responseValidator: async (data) => await zGetExtrinsicByHashResponse.parseAsync(data),
             url: '/extrinsics/{extrinsic_hash}',
             ...options
         });
@@ -442,7 +415,6 @@ export class GenesisService {
         return (options?.client ?? client).get<GetGenesisRecordsResponses, GetGenesisRecordsErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetGenesisRecordsData.parseAsync(data),
             responseTransformer: getGenesisRecordsResponseTransformer,
-            responseValidator: async (data) => await zGetGenesisRecordsResponse.parseAsync(data),
             url: '/genesis',
             ...options
         });
@@ -459,7 +431,6 @@ export class MetadataService {
         return (options?.client ?? client).get<GetMetadataListResponses, GetMetadataListErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataListData.parseAsync(data),
             responseTransformer: getMetadataListResponseTransformer,
-            responseValidator: async (data) => await zGetMetadataListResponse.parseAsync(data),
             url: '/metadata',
             ...options
         });
@@ -473,7 +444,6 @@ export class MetadataService {
     public static getMetadata<ThrowOnError extends boolean = false>(options: Options<GetMetadataData, ThrowOnError>) {
         return (options.client ?? client).get<GetMetadataResponses, GetMetadataErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataData.parseAsync(data),
-            responseValidator: async (data) => await zGetMetadataResponse.parseAsync(data),
             url: '/metadata/{spec_version}',
             ...options
         });
@@ -487,7 +457,6 @@ export class MetadataService {
     public static getMetadataHex<ThrowOnError extends boolean = false>(options: Options<GetMetadataHexData, ThrowOnError>) {
         return (options.client ?? client).get<GetMetadataHexResponses, GetMetadataHexErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataHexData.parseAsync(data),
-            responseValidator: async (data) => await zGetMetadataHexResponse.parseAsync(data),
             url: '/metadata/{spec_version}/hex',
             ...options
         });
@@ -501,7 +470,6 @@ export class MetadataService {
     public static getMetadataJson<ThrowOnError extends boolean = false>(options: Options<GetMetadataJsonData, ThrowOnError>) {
         return (options.client ?? client).get<GetMetadataJsonResponses, GetMetadataJsonErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataJsonData.parseAsync(data),
-            responseValidator: async (data) => await zGetMetadataJsonResponse.parseAsync(data),
             url: '/metadata/{spec_version}/json',
             ...options
         });
@@ -515,7 +483,6 @@ export class MetadataService {
     public static getMetadataPallets<ThrowOnError extends boolean = false>(options: Options<GetMetadataPalletsData, ThrowOnError>) {
         return (options.client ?? client).get<GetMetadataPalletsResponses, GetMetadataPalletsErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataPalletsData.parseAsync(data),
-            responseValidator: async (data) => await zGetMetadataPalletsResponse.parseAsync(data),
             url: '/metadata/{spec_version}/pallets',
             ...options
         });
@@ -529,7 +496,6 @@ export class MetadataService {
     public static getMetadataPallet<ThrowOnError extends boolean = false>(options: Options<GetMetadataPalletData, ThrowOnError>) {
         return (options.client ?? client).get<GetMetadataPalletResponses, GetMetadataPalletErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataPalletData.parseAsync(data),
-            responseValidator: async (data) => await zGetMetadataPalletResponse.parseAsync(data),
             url: '/metadata/{spec_version}/pallets/{pallet_index}',
             ...options
         });
@@ -543,7 +509,6 @@ export class MetadataService {
     public static getMetadataPalletCalls<ThrowOnError extends boolean = false>(options: Options<GetMetadataPalletCallsData, ThrowOnError>) {
         return (options.client ?? client).get<GetMetadataPalletCallsResponses, GetMetadataPalletCallsErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataPalletCallsData.parseAsync(data),
-            responseValidator: async (data) => await zGetMetadataPalletCallsResponse.parseAsync(data),
             url: '/metadata/{spec_version}/pallets/{pallet_index}/calls',
             ...options
         });
@@ -557,7 +522,6 @@ export class MetadataService {
     public static getMetadataPalletConstants<ThrowOnError extends boolean = false>(options: Options<GetMetadataPalletConstantsData, ThrowOnError>) {
         return (options.client ?? client).get<GetMetadataPalletConstantsResponses, GetMetadataPalletConstantsErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataPalletConstantsData.parseAsync(data),
-            responseValidator: async (data) => await zGetMetadataPalletConstantsResponse.parseAsync(data),
             url: '/metadata/{spec_version}/pallets/{pallet_index}/constants',
             ...options
         });
@@ -571,7 +535,6 @@ export class MetadataService {
     public static getMetadataPalletErrors<ThrowOnError extends boolean = false>(options: Options<GetMetadataPalletErrorsData, ThrowOnError>) {
         return (options.client ?? client).get<GetMetadataPalletErrorsResponses, GetMetadataPalletErrorsErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataPalletErrorsData.parseAsync(data),
-            responseValidator: async (data) => await zGetMetadataPalletErrorsResponse.parseAsync(data),
             url: '/metadata/{spec_version}/pallets/{pallet_index}/errors',
             ...options
         });
@@ -585,7 +548,6 @@ export class MetadataService {
     public static getMetadataPalletEvents<ThrowOnError extends boolean = false>(options: Options<GetMetadataPalletEventsData, ThrowOnError>) {
         return (options.client ?? client).get<GetMetadataPalletEventsResponses, GetMetadataPalletEventsErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataPalletEventsData.parseAsync(data),
-            responseValidator: async (data) => await zGetMetadataPalletEventsResponse.parseAsync(data),
             url: '/metadata/{spec_version}/pallets/{pallet_index}/events',
             ...options
         });
@@ -599,7 +561,6 @@ export class MetadataService {
     public static getMetadataPalletStorageItems<ThrowOnError extends boolean = false>(options: Options<GetMetadataPalletStorageItemsData, ThrowOnError>) {
         return (options.client ?? client).get<GetMetadataPalletStorageItemsResponses, GetMetadataPalletStorageItemsErrors, ThrowOnError>({
             requestValidator: async (data) => await zGetMetadataPalletStorageItemsData.parseAsync(data),
-            responseValidator: async (data) => await zGetMetadataPalletStorageItemsResponse.parseAsync(data),
             url: '/metadata/{spec_version}/pallets/{pallet_index}/storage',
             ...options
         });

@@ -31,7 +31,8 @@ export default defineConfig({
     {
       name: "zod",
       requests: true,
-      responses: true,
+      // FIX: better to enable it but OpenAPI spec file causes validation related issue
+      responses: false,
     },
   ],
 });

@@ -483,14 +483,6 @@ export const zGetBlocksData = z.object({
     }))
 });
 
-/**
- * Paginated list of matching blocks.
- */
-export const zGetBlocksResponse = z.object({
-    data: z.array(zBlock),
-    pagination: zPaginationData
-});
-
 export const zGetBlocksByReferenceData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -498,11 +490,6 @@ export const zGetBlocksByReferenceData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-/**
- * List of matching blocks.
- */
-export const zGetBlocksByReferenceResponse = z.array(zBlock);
 
 export const zGetCallsByBlockReferenceData = z.object({
     body: z.optional(z.never()),
@@ -516,14 +503,6 @@ export const zGetCallsByBlockReferenceData = z.object({
         pallet_call_name: z.optional(z.string()),
         include_args: z.optional(z.boolean()).default(false)
     }))
-});
-
-/**
- * Paginated list of matching calls.
- */
-export const zGetCallsByBlockReferenceResponse = z.object({
-    data: z.array(zCall),
-    pagination: zPaginationData
 });
 
 export const zGetEventsByBlockReferenceData = z.object({
@@ -540,14 +519,6 @@ export const zGetEventsByBlockReferenceData = z.object({
     }))
 });
 
-/**
- * Paginated list of matching events.
- */
-export const zGetEventsByBlockReferenceResponse = z.object({
-    data: z.array(zEvent),
-    pagination: zPaginationData
-});
-
 export const zGetEventsByBlockReferenceAndIndexData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -558,11 +529,6 @@ export const zGetEventsByBlockReferenceAndIndexData = z.object({
         include_args: z.optional(z.boolean()).default(false)
     }))
 });
-
-/**
- * List of matching events.
- */
-export const zGetEventsByBlockReferenceAndIndexResponse = z.array(zEvent);
 
 export const zGetExtrinsicsByBlockReferenceData = z.object({
     body: z.optional(z.never()),
@@ -580,14 +546,6 @@ export const zGetExtrinsicsByBlockReferenceData = z.object({
     }))
 });
 
-/**
- * Paginated list of matching extrinsics.
- */
-export const zGetExtrinsicsByBlockReferenceResponse = z.object({
-    data: z.array(zExtrinsic),
-    pagination: zPaginationData
-});
-
 export const zGetExtrinsicsByBlockReferenceAndIndexData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -596,11 +554,6 @@ export const zGetExtrinsicsByBlockReferenceAndIndexData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-/**
- * List of matching extrinsics.
- */
-export const zGetExtrinsicsByBlockReferenceAndIndexResponse = z.array(zExtrinsic);
 
 export const zGetCallsByBlockReferenceAndExtrinsicIndexData = z.object({
     body: z.optional(z.never()),
@@ -615,14 +568,6 @@ export const zGetCallsByBlockReferenceAndExtrinsicIndexData = z.object({
         pallet_call_name: z.optional(z.string()),
         include_args: z.optional(z.boolean()).default(false)
     }))
-});
-
-/**
- * Paginated list of matching calls.
- */
-export const zGetCallsByBlockReferenceAndExtrinsicIndexResponse = z.object({
-    data: z.array(zCall),
-    pagination: zPaginationData
 });
 
 export const zGetEventsByBlockReferenceAndExtrinsicIndexData = z.object({
@@ -640,14 +585,6 @@ export const zGetEventsByBlockReferenceAndExtrinsicIndexData = z.object({
     }))
 });
 
-/**
- * Paginated list of matching events.
- */
-export const zGetEventsByBlockReferenceAndExtrinsicIndexResponse = z.object({
-    data: z.array(zEvent),
-    pagination: zPaginationData
-});
-
 export const zGetTracesByBlockReferenceData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -657,14 +594,6 @@ export const zGetTracesByBlockReferenceData = z.object({
         page: z.optional(z.int().gte(1)).default(1),
         page_size: z.optional(z.int().gte(1).lte(100)).default(25)
     }))
-});
-
-/**
- * Paginated list of matching traces.
- */
-export const zGetTracesByBlockReferenceResponse = z.object({
-    data: z.array(zTrace),
-    pagination: zPaginationData
 });
 
 export const zGetCallsData = z.object({
@@ -685,14 +614,6 @@ export const zGetCallsData = z.object({
     }))
 });
 
-/**
- * Paginated list of matching calls.
- */
-export const zGetCallsResponse = z.object({
-    data: z.array(zCall),
-    pagination: zPaginationData
-});
-
 export const zGetCallByHashData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -703,11 +624,6 @@ export const zGetCallByHashData = z.object({
     }))
 });
 
-/**
- * Call with the given hash.
- */
-export const zGetCallByHashResponse = zCall;
-
 export const zGetCallArgsByHashData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -716,11 +632,6 @@ export const zGetCallArgsByHashData = z.object({
     query: z.optional(z.never())
 });
 
-/**
- * Arguments for the runtime call with the given hash.
- */
-export const zGetCallArgsByHashResponse = zCallArgs;
-
 export const zGetCallExtrinsicByHashData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -728,11 +639,6 @@ export const zGetCallExtrinsicByHashData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-/**
- * The extrinsic that contains the call.
- */
-export const zGetCallExtrinsicByHashResponse = zExtrinsic;
 
 export const zGetParentCallByHashData = z.object({
     body: z.optional(z.never()),
@@ -743,11 +649,6 @@ export const zGetParentCallByHashData = z.object({
         include_args: z.optional(z.boolean()).default(false)
     }))
 });
-
-/**
- * Parent call for the given sub call hash.
- */
-export const zGetParentCallByHashResponse = zCall;
 
 export const zGetSubCallsByHashData = z.object({
     body: z.optional(z.never()),
@@ -761,14 +662,6 @@ export const zGetSubCallsByHashData = z.object({
         pallet_call_name: z.optional(z.string()),
         include_args: z.optional(z.boolean()).default(false)
     }))
-});
-
-/**
- * Paginated list of matching calls.
- */
-export const zGetSubCallsByHashResponse = z.object({
-    data: z.array(zCall),
-    pagination: zPaginationData
 });
 
 export const zGetEventsData = z.object({
@@ -789,14 +682,6 @@ export const zGetEventsData = z.object({
     }))
 });
 
-/**
- * Paginated list of matching events.
- */
-export const zGetEventsResponse = z.object({
-    data: z.array(zEvent),
-    pagination: zPaginationData
-});
-
 export const zGetEventByHashData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -807,11 +692,6 @@ export const zGetEventByHashData = z.object({
     }))
 });
 
-/**
- * Event with the given hash.
- */
-export const zGetEventByHashResponse = zEvent;
-
 export const zGetEventArgsByHashData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -819,11 +699,6 @@ export const zGetEventArgsByHashData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-/**
- * Arguments for the runtime event with the given hash.
- */
-export const zGetEventArgsByHashResponse = zEventArgs;
 
 export const zGetExtrinsicsData = z.object({
     body: z.optional(z.never()),
@@ -842,14 +717,6 @@ export const zGetExtrinsicsData = z.object({
     }))
 });
 
-/**
- * Paginated list of matching extrinsics.
- */
-export const zGetExtrinsicsResponse = z.object({
-    data: z.array(zExtrinsic),
-    pagination: zPaginationData
-});
-
 export const zGetExtrinsicByHashData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -857,11 +724,6 @@ export const zGetExtrinsicByHashData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-/**
- * Extrinsic with the given hash.
- */
-export const zGetExtrinsicByHashResponse = zExtrinsic;
 
 export const zGetExtrinsicRootCallByHashData = z.object({
     body: z.optional(z.never()),
@@ -872,11 +734,6 @@ export const zGetExtrinsicRootCallByHashData = z.object({
         include_args: z.optional(z.boolean()).default(false)
     }))
 });
-
-/**
- * The root call of the extrinsic.
- */
-export const zGetExtrinsicRootCallByHashResponse = zCall;
 
 export const zGetCallsByExtrinsicHashData = z.object({
     body: z.optional(z.never()),
@@ -890,14 +747,6 @@ export const zGetCallsByExtrinsicHashData = z.object({
         pallet_call_name: z.optional(z.string()),
         include_args: z.optional(z.boolean()).default(false)
     }))
-});
-
-/**
- * Paginated list of matching calls.
- */
-export const zGetCallsByExtrinsicHashResponse = z.object({
-    data: z.array(zCall),
-    pagination: zPaginationData
 });
 
 export const zGetEventsByExtrinsicHashData = z.object({
@@ -914,14 +763,6 @@ export const zGetEventsByExtrinsicHashData = z.object({
     }))
 });
 
-/**
- * Paginated list of matching events.
- */
-export const zGetEventsByExtrinsicHashResponse = z.object({
-    data: z.array(zEvent),
-    pagination: zPaginationData
-});
-
 export const zGetGenesisRecordsData = z.object({
     body: z.optional(z.never()),
     path: z.optional(z.never()),
@@ -929,14 +770,6 @@ export const zGetGenesisRecordsData = z.object({
         page: z.optional(z.int().gte(1)).default(1),
         page_size: z.optional(z.int().gte(1).lte(100)).default(25)
     }))
-});
-
-/**
- * Paginated list of genesis record items.
- */
-export const zGetGenesisRecordsResponse = z.object({
-    data: z.array(zGenesisRecord),
-    pagination: zPaginationData
 });
 
 export const zGetMetadataListData = z.object({
@@ -948,14 +781,6 @@ export const zGetMetadataListData = z.object({
     }))
 });
 
-/**
- * Response with a paginated list of metadata summaries.
- */
-export const zGetMetadataListResponse = z.object({
-    data: z.array(zMetadataSummary),
-    pagination: zPaginationData
-});
-
 export const zGetMetadataData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -963,11 +788,6 @@ export const zGetMetadataData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-/**
- * Full metadata with the given spec version.
- */
-export const zGetMetadataResponse = zMetadata;
 
 export const zGetMetadataHexData = z.object({
     body: z.optional(z.never()),
@@ -977,11 +797,6 @@ export const zGetMetadataHexData = z.object({
     query: z.optional(z.never())
 });
 
-/**
- * SCALE-encoded prefixed metadata hexadecimal string.
- */
-export const zGetMetadataHexResponse = zHexString;
-
 export const zGetMetadataJsonData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -990,11 +805,6 @@ export const zGetMetadataJsonData = z.object({
     query: z.optional(z.never())
 });
 
-/**
- * Full metadata with the given spec version.
- */
-export const zGetMetadataJsonResponse = zMetadataJson;
-
 export const zGetMetadataPalletsData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -1002,11 +812,6 @@ export const zGetMetadataPalletsData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-/**
- * List of summaries of matching metadata pallets.
- */
-export const zGetMetadataPalletsResponse = z.array(zMetadataPalletSummary);
 
 export const zGetMetadataPalletData = z.object({
     body: z.optional(z.never()),
@@ -1017,11 +822,6 @@ export const zGetMetadataPalletData = z.object({
     query: z.optional(z.never())
 });
 
-/**
- * Full metadata pallet with the given spec version and pallet index.
- */
-export const zGetMetadataPalletResponse = zMetadataPallet;
-
 export const zGetMetadataPalletCallsData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -1030,11 +830,6 @@ export const zGetMetadataPalletCallsData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-/**
- * All calls in a pallet.
- */
-export const zGetMetadataPalletCallsResponse = z.array(zMetadataCall);
 
 export const zGetMetadataPalletConstantsData = z.object({
     body: z.optional(z.never()),
@@ -1045,11 +840,6 @@ export const zGetMetadataPalletConstantsData = z.object({
     query: z.optional(z.never())
 });
 
-/**
- * All constants in a pallet.
- */
-export const zGetMetadataPalletConstantsResponse = z.array(zMetadataConstant);
-
 export const zGetMetadataPalletErrorsData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -1058,11 +848,6 @@ export const zGetMetadataPalletErrorsData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-/**
- * All errors in a pallet.
- */
-export const zGetMetadataPalletErrorsResponse = z.array(zMetadataError);
 
 export const zGetMetadataPalletEventsData = z.object({
     body: z.optional(z.never()),
@@ -1073,11 +858,6 @@ export const zGetMetadataPalletEventsData = z.object({
     query: z.optional(z.never())
 });
 
-/**
- * All events in a pallet.
- */
-export const zGetMetadataPalletEventsResponse = z.array(zMetadataEvent);
-
 export const zGetMetadataPalletStorageItemsData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -1086,11 +866,6 @@ export const zGetMetadataPalletStorageItemsData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-/**
- * All storage items in a pallet.
- */
-export const zGetMetadataPalletStorageItemsResponse = z.array(zMetadataStorageItem);
 
 export const zGetTracesData = z.object({
     body: z.optional(z.never()),
@@ -1109,14 +884,6 @@ export const zGetTracesData = z.object({
     }))
 });
 
-/**
- * Paginated list of matching traces.
- */
-export const zGetTracesResponse = z.object({
-    data: z.array(zTrace),
-    pagination: zPaginationData
-});
-
 export const zGetTraceByHashData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -1125,11 +892,6 @@ export const zGetTraceByHashData = z.object({
     query: z.optional(z.never())
 });
 
-/**
- * Trace with the given hash.
- */
-export const zGetTraceByHashResponse = zTrace;
-
 export const zGetTraceValueByHashData = z.object({
     body: z.optional(z.never()),
     path: z.object({
@@ -1137,8 +899,3 @@ export const zGetTraceValueByHashData = z.object({
     }),
     query: z.optional(z.never())
 });
-
-export const zGetTraceValueByHashResponse = z.union([
-    zHexString,
-    z.void()
-]);
